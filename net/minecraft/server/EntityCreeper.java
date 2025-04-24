@@ -5,7 +5,7 @@ public class EntityCreeper extends EntityMonster {
     private int bp;
     private int fuseTicks;
     private int maxFuseTicks = 30;
-    private int explosionRadius = 3;
+    private int explosionRadius = 3; //////// Increase blast radius here (Original Value = 3)  
 
     public EntityCreeper(World world) {
         super(world);
@@ -167,7 +167,7 @@ public class EntityCreeper extends EntityMonster {
             boolean flag = this.world.getGameRules().getBoolean("mobGriefing");
 
             if (this.isPowered()) {
-                this.world.explode(this, this.locX, this.locY, this.locZ, (float) (this.explosionRadius * 2), flag);
+                this.world.explode(this, this.locX, this.locY, this.locZ, (float) (this.explosionRadius * 2), flag); ///////Increase blast radius of powered explosion here (this.explosionRadius * 2)
             } else {
                 this.world.explode(this, this.locX, this.locY, this.locZ, (float) this.explosionRadius, flag);
             }
