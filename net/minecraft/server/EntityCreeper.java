@@ -4,7 +4,7 @@ public class EntityCreeper extends EntityMonster {
 
     private int bp;
     private int fuseTicks;
-    private int maxFuseTicks = 30;
+    private int maxFuseTicks = 30; /////////// Explosion timer here (Original value = 30)
     private int explosionRadius = 3; //////// Increase blast radius here (Original Value = 3)  
 
     public EntityCreeper(World world) {
